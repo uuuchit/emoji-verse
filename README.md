@@ -37,7 +37,7 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/emoji-verse.git
+   git clone https://github.com/uuuchit/emoji-verse.git
    ```
 2. Navigate to the project directory:
    ```bash
@@ -95,7 +95,27 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Contact
 
 For any questions or suggestions, feel free to reach out:
-- **GitHub Issues**: [Issues Page](https://github.com/your-username/emoji-verse/issues)
+- **GitHub Issues**: [Issues Page](https://github.com/uuuchit/emoji-verse/issues)
 
 Let’s make the world a more expressive place, one emoji at a time! 🌟
 
+---
+
+## Current Implementation Status
+
+- **Emoji-Only Posts**: Implemented in `src/backend/routes/emojiPosts.js` and `src/components/EmojiPost.js`.
+- **Trending Emoji Chains**: Implemented in `src/components/TrendingEmojiChains.js`.
+- **Emoji Reactions**: Implemented in `src/backend/routes/emojiReactions.js` and `src/components/EmojiReactions.js`.
+- **Social Sharing**: Implemented in `src/api/socialSharing.js` and `src/components/SocialSharing.js`.
+- **Custom Emoji Combos**: Implemented in `src/components/CustomEmojiCombos.js`.
+- **Leaderboard**: Implemented in `src/backend/routes/leaderboard.js` and `src/components/Leaderboard.js`.
+
+---
+
+## Roadmap Features Not Yet Implemented
+
+- Emoji search and autocomplete for post creation
+- Enhanced leaderboard with categories
+- Support for custom emoji packs
+- AI-based emoji suggestions for creative posts
+- Mobile app release on iOS and Android

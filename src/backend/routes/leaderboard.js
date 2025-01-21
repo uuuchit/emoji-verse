@@ -62,4 +62,15 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
+// Get leaderboard entries by category
+router.get('/category/:category', async (req, res) => {
+  try {
+    const category = req.params.category;
+    const entries = await Leaderboard.find({ category });
+    res.status(200).json(entries);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
 module.exports = router;
