@@ -4,6 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const firebase = require('firebase');
+const path = require('path');
 const emojiPostsRoutes = require('./routes/emojiPosts');
 const emojiReactionsRoutes = require('./routes/emojiReactions');
 const leaderboardRoutes = require('./routes/leaderboard');
@@ -35,6 +36,13 @@ firebase.initializeApp(firebaseConfig);
 app.use('/api/emojiPosts', emojiPostsRoutes);
 app.use('/api/emojiReactions', emojiReactionsRoutes);
 app.use('/api/leaderboard', leaderboardRoutes);
+
+// Serve frontend
+app.use(express.static(path.join(__dirname, '../../out')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../../out/index.html'));
+});
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
